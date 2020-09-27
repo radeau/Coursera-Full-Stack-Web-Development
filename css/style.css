@@ -29,12 +29,11 @@ address{
     color:#0f0f0f;
 }
 
-/**about-us**/
-
-.aboutUs-row-content{
-    padding: 50px 0px 50px 0px;
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
 }
 
-.hrule {
-    border-bottom: 1px solid #D3D3D3;
+.navbar-dark {
+     background-color: #512DA8;
 }
