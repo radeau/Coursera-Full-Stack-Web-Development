@@ -79,23 +79,89 @@
         </div>
     </div>
 
+    <div id="rsrvBtn" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Reserve a Table</h5>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label class="col-12 col-sm-2">Number of Guests</label>
+                  <div class="col">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="numGuests" id="one_guest_radio" value="one" checked>
+                      <label class="form-check-label" for="one_guest_radio">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="numGuests" id="two_guest_radio" value="two">
+                      <label class="form-check-label" for="two_guest_radio">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="numGuests" id="three_guest_radio" value="three">
+                      <label class="form-check-label" for="three_guest_radio">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="numGuests" id="four_guest_radio" value="four">
+                      <label class="form-check-label" for="four_guest_radio">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="numGuests" id="six_guest_radio" value="six">
+                      <label class="form-check-label" for="six_guest_radio">6</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-12 col-sm-2">Section</label>
+                  <div class="col-12 col-sm-4">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-success active">
+                        <input type="radio" name="section" value="non_smoking" id="non_smoking" autocomplete="off" checked>Non-Smoking
+                      </label>
+                      <label class="btn btn-danger">
+                        <input type="radio" name="section" value="smoking" id="smoking" autocomplete="off">Smoking
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-12 col-sm-2">Date and Time</label>
+                  <div class="col-12 col-sm-4">
+                    <input type="date" class="form-control" name="date" id="date">
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <input type="time" class="form-control" name="time" id="time">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col offset-0 offset-sm-2">
+                    <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Reserve</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                </div>
-                <div class="col-12 col-sm-3 align-self-center">
-                    <img src="img/logo.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-12 col-sm-3 align-self-center">
-                    <button class="btn btn-warning btn-block"><a href="#reserveBtn" class="btn font-weight-bold" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom">Reserve Table</a>
-                    </button>
-                </div>
+              <div class="col-12 col-sm-6">
+                <h1>Ristorante con Fusion</h1>
+                <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+              </div>
+              <div class="col-12 col-sm-3 text-center align-self-center">
+                <img src="img/logo.png" class="img-fluid" alt="Ristorante con Fusion">
+              </div>
+              <div class="col-12 mt-5 mt-sm-0 col-sm-3 text-center align-self-center">
+                <button type="button" class="btn btn-block nav-link btn-warning text-white font-weight-bold" data-toggle="modal" data-target="#rsrvBtn">Reserve Table</button>
+              </div>
             </div>
-        </div>
+          </div>
     </header>
 
     <div class="container">
@@ -211,72 +277,6 @@
             </div>
         </div>
 
-        <div class="row row-content justify-content-center" id="reserveBtn">
-            <div class="col-12 col-sm-8">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white font-weight-bold">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form>
-                            <div class="row form-group">
-                                <legend for="no-of-guest" class="col-form-label col-sm-4">Number of Guests</legend>
-                                <div class="col-sm-8 px-0 ml-3 ml-sm-0">
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="guest" id="guest1" value="one">
-                                        <label for="no-of-guest" class="form-check-label">1</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="guest" id="guest2" value="two">
-                                        <label for="no-of-guest" class="form-check-label">2</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="guest" id="guest3" value="three">
-                                        <label for="no-of-guest" class="form-check-label">3</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="guest" id="guest4" value="four">
-                                        <label for="no-of-guest" class="form-check-label">4</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="guest" id="guest5" value="five">
-                                        <label for="no-of-guest" class="form-check-label">5</label>
-                                    </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <input type="radio" class="form-check-input" name="guest" id="guest6" value="six">
-                                        <label for="no-of-guest" class="form-check-label">6</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                                <legend for="date-time" class="col-form-label col-sm-4 pt-0">Date and time</legend>
-                                <form class="col-sm-8">
-                                    <div class="form-row">
-                                        <div class="col-sm-6 ml-3 ml-sm-0">
-                                            <input type="date" class="form-control">
-                                        </div>
-                                        <div class="col-sm-6 mb-4 ml-3 ml-sm-0">
-                                            <input type="time" class="form-control">
-                                        </div>
-                                    </div>
-                                </form>
-                           </div>
-
-                           <div class="row form-group">
-                               <div class="offset-sm-4">
-                                <button type="button" class="btn btn-primary ml-3 ml-sm-0">Reserve</button>
-                               </div>
-                           </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -324,13 +324,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!--
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
-    -->
+
     <script>
         $(document).ready(function(){
             $("#mycarousel").carousel( { interval: 2000 } );
