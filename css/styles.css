@@ -1,3 +1,13 @@
+.modal-header {
+  background-color: #512DA8;
+  color: floralwhite; }
+
+.close {
+  color: floralwhite !important; }
+
+.modal-body {
+  background-color: #D1C4E9; }
+
 .row-header {
   margin: 0px auto;
   padding: 0px 0px; }
@@ -29,7 +39,7 @@ body {
   z-index: 0; }
 
 .navbar-dark {
-  background-color: #512DA8; }
+  background-color: #512DA8 !important; }
 
 .tab-content {
   border-left: 1px solid #ddd;
@@ -50,5 +60,4 @@ body {
 #carouselButton {
   right: 0px;
   position: absolute;
-  bottom: 0px;
-  z-index: 1; }
+  bottom: 0px; }
